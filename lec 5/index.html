@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            border: 3px solid red;
+            height: 400px;
+            width: 380px;
+            margin: 20px auto;    /*20px-top & bottom se distance*/ /*auto-left right ki space divide ho jayegi*/
+            position: relative;
+        }
+        #child{
+            background-color: yellow;
+            height:100px;
+            width: 100px;
+            position:absolute;
+            left: 20px;
+            top:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>
