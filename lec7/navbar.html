@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            display: flex;
+            height: 10vh;
+            align-items: center;
+            gap:40px;
+            /* align-content: space-between; //y axis */
+        }
+        #one{
+            font-size: xx-large;
+             color: black 2px solid ;
+        }
+        #two{
+            font-size: large;
+            color: black 2px solid  ;
+        }
+        #three{
+            font-size: large;
+            color: black 2px solid  ;
+        }
+        #four{
+            font-size: large;
+            color: black 2px solid  ;
+        }
+        @media  screen and (max-width:600px) {
+            .nav{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+          
+        
+    </style>
+</head>
+<body>
+    
+    <div class="nav">
+            <a id="one">navbar</a>
+            <a id="two">home</a>
+            <a id="three">link</a>
+            <a id="four">drop down</a>
+            <input type="text" placeholder="search"> 
+        </div>
+        
+        
+</body>
+</html>
