@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color:darksalmon ;
+        }
+        .container{
+            background-color: aliceblue;
+            border: 2px solid black;
+            height: 55vh;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            /* flex-wrap: wrap;   *//*this remove when we use flex shrink*/
+            
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color:lightcoral;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+}
+#one{
+     flex-basis: 110px; 
+     flex-grow: 1; 
+}
+#two{
+
+     flex-grow: 2;
+     flex-shrink: 2;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>flexbox parent property</h1>
+    <div class="container">
+        <div class="box" id="one">1</div>
+        <div class="box" id="two">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+         <div class="box">6</div>
+         <div class="box">8</div>
+
+         </div>
+</body>
+</html>
