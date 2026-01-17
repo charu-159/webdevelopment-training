@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- tells browser this is a document -->
+<html lang="en"><!-- lang="en" means the page language is English.-->
+<head>
+    <meta charset="UTF-8"><!--page support all character-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--makes page responsive on mobile devices-->
+    <title>Form</title>
+</head>
+<body>
+    <fieldset><!--cretes box arounf form elements-->
+        <legend style="text-align: center;">FORM</legend><!-- adds title on border of fieldset-->
+    <form><!--begins form where user input will be collected-->
+        <label for="one">Name:</label><!--creates a label for name input-->
+        <!-- for="one" links the label to input with id="one" -->
+        <input id="one" type="text" placeholder="Enter your name"/><!--input box for entering name-->
+        <!--placeholder shows light grey input text-->
+        <br/><!--adds 2 line breaks for spacing-->
+        <br/>
+        <label for="two">Number:</label>
+         <input id="two" type="number" placeholder="Enter your number"/>
+         <br/>
+        <br/>
+        <label for="three">Password:</label>
+         <input id="three" type="password" placeholder="Enter your password"/>
+         <br/>
+        <br/>
+        <label for="four">Male</label>
+        <input id="four" name="one" type="radio"/>
+        <label for="five">FeMale</label>
+        <input id="five"name="one" type="radio"/>
+        <br/>
+        <br/>
+        <label for="address">Address:</label>
+        <textarea id="address" rows="6" cols="30"></textarea>
+        <br/>
+        <br/>
+        <label for="file">File</label>
+        <input id="file" type="file"/>
+        <br/>
+        <br/>
+       <label for="seven">City</label>
+        <select>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+            <option>Banglore</option>
+        </select>
+        <input type="checkbox"/>
+        <br/>
+        <br/>
+        <label for="eight">Agree To All Terms And Condition</label>
+         <input type="checkbox"/>
+    </form>
+    </fieldset>
+</body>
+</html>
