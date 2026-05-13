@@ -8,19 +8,89 @@
 </head>
 <body>
 <script>
+//     setTimeout(() => {
+//    console.log("A");
+// }, 0);
+
+// setTimeout(() => {
+//    console.log("C");
+// }, 1000);
+
+// setTimeout(() => {
+//    console.log("D");
+// }, 2000);
+
+// console.log("B");
+
+
+
+//solution of below drawback --callback chaining 
+function step1(next) {
     setTimeout(() => {
-   console.log("A");
-}, 0);
+        console.log("selected");
+        next();
+    }, 3000);
+}
 
-setTimeout(() => {
-   console.log("C");
-}, 1000);
+function step2(next) {
+    setTimeout(() => {
+        console.log("processed");
+        next();
+    }, 2000);
+}
 
-setTimeout(() => {
-   console.log("D");
-}, 2000);
+function step3(next) {
+    setTimeout(() => {
+        console.log("select");
+        next();
+    }, 1500);
+}
 
-console.log("B");
-</script>
-</body>
-</html>
+function step4() {
+    setTimeout(() => {
+        console.log("process");
+    }, 1000);
+}
+
+// Run in sequence
+step1(() => {
+    step2(() => {
+        step3(() => {
+            step4();
+        });
+    });
+});
+
+
+
+
+//drawback ya usecase of this case
+
+// function step1() {
+//     setTimeout(() => {
+//         console.log("selected");
+//     }, 3000);
+// }
+
+// function step2() {
+//     setTimeout(() => {
+//         console.log("processed");
+//     }, 2000);
+// }
+// function step3() {
+//     setTimeout(() => {
+//         console.log("select");
+//     }, 1500);
+// }
+// function step4() {
+//     setTimeout(() => {
+//         console.log("process");
+//     }, 1000);
+// }
+
+ </script>
+ </body>
+ </html>
+
+
+ 
