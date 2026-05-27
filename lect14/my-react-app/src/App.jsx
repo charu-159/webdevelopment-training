@@ -30,22 +30,51 @@
 
 // export default App
 
-import React,{useState} from 'react'
 
-const App = () => {
-  let[input,setInput]=useState("")
-  
-  function fun1(e){
-    // console.log(e.target.value)
-    setInput(e.target.value)
-    console.log(input)
-  }
+// import React, { useState } from 'react'
+
+// const App = () => {
+//   let [input, setInput] = useState("")
+//   let [show, setShow] = useState("")
+
+//   function fun1(e) {
+//     setInput(e.target.value)
+//     console.log(e.target.value) // logs latest value
+//   }
+
+//   function fun2() {
+//     setShow(input) // correct syntax
+//   }
+
+//   return (
+//     <div>
+//       <h2>{show}</h2> {/* show only after button click */}
+//       <input 
+//         type="text" 
+//         name="input" 
+//         value={input} 
+//         placeholder="Enter your name" 
+//         onChange={fun1} 
+//       />
+//       <button onClick={fun2}>Click</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+import React from "react";
+import Form from "./Form";
+import "./App.css";
+
+function App() {
   return (
-    <div>
-      <h2>{input}</h2>
-    <input type="text" name="input" value={input} placeholder="Enter your name" onChange={fun1}/>
+    <div className="container">
+      <Form />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
+
