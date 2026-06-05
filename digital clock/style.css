@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #1e3c72, #2a5298, #6a3093);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.clock {
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.greeting {
+  font-size: 26px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #00ffff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00ffff;
+  color: #000;
+}
