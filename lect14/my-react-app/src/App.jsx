@@ -64,17 +64,47 @@
 // export default App
 
 
-import React from "react";
-import Form from "./Form";
-import "./App.css";
+// import React from "react";
+// import Form from "./Form";
+// import "./App.css";
 
-function App() {
+// function App() {
+//   return (
+//     <div className="container">
+//       <Form />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+import React from 'react'
+import Home from "./Home"
+
+//main-> app-> A-> b-> C
+
+
+
+import NavBar from "./NavBar"
+
+import { Route, Routes } from "react-router-dom"
+import Cart from "./Cart"
+
+const App = () => {
+  let [apiData,SetApiData] =   useState([])
+ let [cart,SetCart]= useState([])
   return (
-    <div className="container">
-      <Form />
+
+    <div>
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
+        <Route path="/cart" element={<Cart cart={cart}/>}/>
+
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
-
+export default App
