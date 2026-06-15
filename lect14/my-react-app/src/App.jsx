@@ -79,28 +79,52 @@
 // export default App;
 
 
+// import React from 'react'
+// import Home from "./Home"
+
+// //main-> app-> A-> b-> C
+
+
+
+// import NavBar from "./NavBar"
+
+// import { Route, Routes } from "react-router-dom"
+// import Cart from "./Cart"
+
+// const App = () => {
+//   let [apiData,SetApiData] =   useState([])
+//  let [cart,SetCart]= useState([])
+//   return (
+
+//     <div>
+//       <NavBar/>
+//       <Routes>
+//         <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
+//         <Route path="/cart" element={<Cart cart={cart}/>}/>
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+//userlist -dynamic routing 
+
 import React from 'react'
-import Home from "./Home"
-
-//main-> app-> A-> b-> C
-
-
-
-import NavBar from "./NavBar"
-
+import UserList from "./UserList"
 import { Route, Routes } from "react-router-dom"
-import Cart from "./Cart"
+import UserProfile from "./UserProfile"
 
 const App = () => {
-  let [apiData,SetApiData] =   useState([])
- let [cart,SetCart]= useState([])
   return (
-
     <div>
-      <NavBar/>
+     {/* http://localhost:5173/profile/0 */}
       <Routes>
-        <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
-        <Route path="/cart" element={<Cart cart={cart}/>}/>
+        <Route   path="/"   element={ <UserList/>}/>
+        <Route   path="/profile/:id"   element={ <UserProfile/>}/>
 
       </Routes>
     </div>
