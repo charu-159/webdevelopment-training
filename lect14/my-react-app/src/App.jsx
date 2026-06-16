@@ -113,21 +113,50 @@
 
 //userlist -dynamic routing 
 
+// import React from 'react'
+// import UserList from "./UserList"
+// import { Route, Routes } from "react-router-dom"
+// import UserProfile from "./UserProfile"
+
+// const App = () => {
+//   return (
+//     <div>
+//      {/* http://localhost:5173/profile/0 */}
+//       <Routes>
+//         <Route   path="/"   element={ <UserList/>}/>
+//         <Route   path="/profile/:id"   element={ <UserProfile/>}/>
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
 import React from 'react'
-import UserList from "./UserList"
-import { Route, Routes } from "react-router-dom"
-import UserProfile from "./UserProfile"
 
 const App = () => {
+  Array.prototype.myMap=function(cb){
+    let res=[]
+    for(let i=0;i<this.length;i++){
+      res.push(cb(this[i],i,this))
+    }
+    return res
+  }
+  let arr=[1,2,3,4]
+  let data= arr.myMap((a,b,c)=>{
+    return a*2
+  })
+  // console.log(arr.toString());
+  console.log(data);
+  // console.log(Array.prototype);
+  // console.log(Object.prototype);
+  // console.log(String.prototype);
+  
+  
+  
   return (
-    <div>
-     {/* http://localhost:5173/profile/0 */}
-      <Routes>
-        <Route   path="/"   element={ <UserList/>}/>
-        <Route   path="/profile/:id"   element={ <UserProfile/>}/>
-
-      </Routes>
-    </div>
+    <div>App</div>
   )
 }
 
